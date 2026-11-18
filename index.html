@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GameLand | دنیای بازی و دوستی</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+:root{--bg:#0b1020;--panel:#151d33;--panel2:#1b2742;--text:#f4f6ff;--muted:#9ca9c5;--purple:#895cff;--cyan:#39d5e8;--pink:#ff5fa2}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0%,#25204b 0,transparent 35%),var(--bg);color:var(--text);font-family:Vazirmatn,Tahoma,sans-serif;min-height:100vh}
+button,input{font:inherit}button{cursor:pointer;border:0}.app{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.sidebar{background:#0d1427dd;border-left:1px solid #ffffff12;padding:25px 18px;position:sticky;top:0;height:100vh}.brand{display:flex;align-items:center;gap:10px;font-size:23px;font-weight:800;margin:0 8px 34px}.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--purple),var(--cyan));display:grid;place-items:center;font-size:23px;box-shadow:0 8px 25px #895cff55}.nav{display:grid;gap:9px}.nav button{color:var(--muted);background:transparent;text-align:right;padding:13px 15px;border-radius:13px;font-size:15px}.nav button.active,.nav button:hover{background:#895cff25;color:white}.side-note{position:absolute;bottom:22px;right:18px;left:18px;background:linear-gradient(135deg,#332568,#16334a);padding:16px;border-radius:17px;color:#dce7ff;font-size:13px}.main{padding:30px;max-width:1500px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}.eyebrow{color:var(--cyan);font-size:13px}.top h1{margin:3px 0;font-size:27px}.user{display:flex;align-items:center;gap:10px;background:var(--panel);padding:8px 13px;border-radius:14px}.avatar{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#ff7bb0,#875cff);display:grid;place-items:center;font-weight:800}.hero{background:linear-gradient(115deg,#442d83,#1d5c76);padding:28px;border-radius:23px;display:flex;justify-content:space-between;align-items:center;gap:20px;overflow:hidden;margin-bottom:24px}.hero h2{font-size:26px;margin:0 0 8px}.hero p{color:#e0e7ff;margin:0 0 18px}.primary{background:linear-gradient(90deg,var(--purple),#5b8cff);color:white;padding:11px 20px;border-radius:12px;font-weight:700}.hero-art{font-size:88px;filter:drop-shadow(0 12px 18px #0005)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:25px}.stat,.card{background:var(--panel);border:1px solid #ffffff0d;border-radius:18px;padding:19px}.stat small{color:var(--muted)}.stat strong{display:block;font-size:25px;margin-top:5px}.section-head{display:flex;align-items:center;justify-content:space-between;margin:25px 0 14px}.section-head h2{font-size:19px;margin:0}.muted{color:var(--muted);font-size:13px}.games{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.game{display:flex;align-items:center;gap:16px}.game-icon{width:66px;height:66px;flex-shrink:0;border-radius:18px;display:grid;place-items:center;font-size:31px;background:linear-gradient(135deg,#5e45ad,#176b83)}.game h3{margin:0 0 5px}.game p{margin:0;color:var(--muted);font-size:13px}.game button{margin-right:auto;background:#2a3450;color:#dce5ff;border-radius:10px;padding:9px 13px}.rooms{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.room{background:var(--panel2);padding:17px;border-radius:16px}.room strong{display:block}.room span{color:var(--muted);font-size:12px}.page{display:none}.page.active{display:block}.chatbox{display:grid;grid-template-columns:1fr 260px;gap:15px}.messages{height:340px;overflow:auto;background:#0e172a;border-radius:15px;padding:15px;display:flex;flex-direction:column;gap:12px}.msg{background:#202c49;padding:10px 13px;border-radius:13px;max-width:85%;align-self:flex-start}.msg.mine{align-self:flex-end;background:#543c9b}.msg small{display:block;color:#b8c2dc;font-size:11px;margin-bottom:3px}.send{display:flex;gap:8px;margin-top:10px}.send input,.guess-input{flex:1;min-width:0;background:#0e172a;border:1px solid #34405e;color:white;padding:12px;border-radius:11px;outline:none}.send button{background:var(--purple);color:white;border-radius:11px;padding:0 18px}.members{background:var(--panel);border-radius:15px;padding:15px}.member{padding:10px 0;border-bottom:1px solid #ffffff10;color:#dbe3f7}.online{color:#5ce0ae;font-size:11px}.game-panel{max-width:700px}.question{font-size:22px;margin:12px 0 20px}.choice{background:#263251;color:white;padding:12px 18px;border-radius:12px;margin:5px}.choice:hover{background:#5b45a0}.result{color:var(--cyan);min-height:28px;margin-top:12px}.profile{display:flex;align-items:center;gap:18px}.profile .avatar{width:72px;height:72px;font-size:25px}.footer{text-align:center;color:#71809f;font-size:12px;margin:35px 0 10px}
+@media(max-width:850px){.app{grid-template-columns:1fr}.sidebar{height:auto;position:relative;padding:13px}.brand{margin:0 5px 12px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;padding:9px 12px}.side-note{display:none}.main{padding:18px}.chatbox{grid-template-columns:1fr}.members{display:none}.rooms{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.top{align-items:flex-start}.top h1{font-size:21px}.user span{display:none}.hero{padding:20px}.hero h2{font-size:20px}.hero-art{font-size:55px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:19px}.games{grid-template-columns:1fr}.rooms{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo">🎮</div> GameLand</div>
+  <nav class="nav">
+    <button class="active" data-page="home">🏠 خانه</button>
+    <button data-page="games">🕹️ بازی‌ها</button>
+    <button data-page="chat">💬 چت عمومی</button>
+    <button data-page="rooms">🌐 اتاق‌ها</button>
+    <button data-page="profile">👤 پروفایل</button>
+  </nav>
+  <div class="side-note"><b>به دنیای بازی خوش اومدی!</b><br>اینجا قراره کنار دوستات کلی خوش بگذرونی ✨</div>
+</aside>
+<main class="main">
+<header class="top"><div><div class="eyebrow">به جمع بازیکن‌ها خوش اومدی</div><h1 id="pageTitle">داشبورد GameLand</h1></div><div class="user"><div class="avatar">A</div><span>بازیکن مهمان</span></div></header>
+<section class="page active" id="home">
+  <div class="hero"><div><div class="eyebrow">PLAY • CHAT • CONNECT</div><h2>بازی کن، دوست پیدا کن، لذت ببر!</h2><p>یک جای دوستانه برای رقابت، گفتگو و سرگرمی.</p><button class="primary" onclick="showPage('games')">شروع بازی‌ها ←</button></div><div class="hero-art">👾</div></div>
+  <div class="stats"><div class="stat"><small>بازی‌های نمایشی</small><strong>۰۲</strong></div><div class="stat"><small>اتاق‌های نمونه</small><strong>۰۳</strong></div><div class="stat"><small>وضعیت حساب</small><strong style="color:#5ce0ae">مهمان</strong></div></div>
+  <div class="section-head"><h2>بازی‌های پیشنهادی</h2><span class="muted">برای شروع انتخاب کن</span></div>
+  <div class="games">
+    <div class="card game"><div class="game-icon">🎭</div><div><h3>جرئت یا حقیقت</h3><p>سؤال‌های جذاب و چالش‌های دوستانه</p></div><button onclick="showPage('games')">بازی</button></div>
+    <div class="card game"><div class="game-icon">🧠</div><div><h3>حدس کلمه</h3><p>هوشت رو به چالش بکش</p></div><button onclick="showPage('games')">بازی</button></div>
+  </div>
+  <div class="section-head"><h2>اتاق‌های فعال</h2><span class="muted">نمونه نمایشی</span></div>
+  <div class="rooms"><div class="room">🎉 <strong>دورهمی دوستان</strong><span>۱۲ عضو · عمومی</span></div><div class="room">🎮 <strong>گیمرها</strong><span>۸ عضو · عمومی</span></div><div class="room">💬 <strong>گپ شبانه</strong><span>۵ عضو · عمومی</span></div></div>
+</section>
+<section class="page" id="games">
+ <div class="section-head"><h2>بازی‌های GameLand</h2><span class="muted">نسخه دمو</span></div>
+ <div class="games">
+  <div class="card game"><div class="game-icon">🎭</div><div><h3>جرئت یا حقیقت</h3><p>یکی رو انتخاب کن و بازی رو شروع کن.</p></div><button onclick="startTruth()">ورود</button></div>
+  <div class="card game"><div class="game-icon">🧠</div><div><h3>حدس کلمه</h3><p>کلمه مخفی رو با راهنمایی پیدا کن.</p></div><button onclick="startGuess()">ورود</button></div>
+ </div>
+ <div class="card game-panel" id="truthPanel" style="display:none;margin-top:18px"><h3>🎭 جرئت یا حقیقت</h3><p class="muted">یکی از گزینه‌ها رو انتخاب کن:</p><button class="choice" onclick="truth('حقیقت')">حقیقت</button><button class="choice" onclick="truth('جرئت')">جرئت</button><div class="question" id="truthQuestion">منتظر انتخاب تو هستیم!</div><div class="result" id="truthResult"></div></div>
+ <div class="card game-panel" id="guessPanel" style="display:none;margin-top:18px"><h3>🧠 حدس کلمه</h3><p>راهنما: چیزی که هر روز باهاش پیام می‌دی و تماس می‌گیری.</p><div class="send"><input id="guess" class="guess-input" placeholder="حدست رو بنویس..."><button onclick="checkGuess()">بررسی</button></div><div class="result" id="guessResult"></div></div>
+</section>
+<section class="page" id="chat">
+ <div class="section-head"><h2>💬 گفتگوی عمومی</h2><span class="muted">چت نمایشی در همین مرورگر</span></div>
+ <div class="chatbox"><div><div class="messages" id="messages"><div class="msg"><small>GameLand</small>به چت عمومی خوش اومدی! 👋</div><div class="msg"><small>آرین</small>سلام بچه‌ها، کسی بازی می‌کنه؟</div><div class="msg"><small>سارا</small>من هستم 😄</div></div><form class="send" id="chatForm"><input id="chatInput" placeholder="پیامت رو بنویس..." autocomplete="off"><button>ارسال</button></form></div><div class="members"><b>اعضای آنلاین</b><div class="member">🟢 آرین <span class="online">آنلاین</span></div><div class="member">🟢 سارا <span class="online">آنلاین</span></div><div class="member">🟢 نیما <span class="online">آنلاین</span></div><div class="member">🟢 تو <span class="online">آنلاین</span></div></div></div>
+ <p class="muted">توجه: پیام‌ها فقط داخل همین نسخه نمایشی دیده می‌شوند و هنوز به سرور یا کاربران دیگر متصل نیستند.</p>
+</section>
+<section class="page" id="rooms">
+ <div class="section-head"><h2>🌐 اتاق‌های گفتگو</h2><span class="muted">اتاق‌های نمونه</span></div>
+ <div class="rooms"><div class="room">🎉 <strong>دورهمی دوستان</strong><span>۱۲ عضو · عمومی</span><p class="muted">گپ و گفت دوستانه</p><button class="primary" onclick="showPage('chat')">ورود به چت</button></div><div class="room">🎮 <strong>گیمرها</strong><span>۸ عضو · عمومی</span><p class="muted">درباره بازی‌ها صحبت کنیم</p><button class="primary" onclick="showPage('chat')">ورود به چت</button></div><div class="room">💬 <strong>گپ شبانه</strong><span>۵ عضو · عمومی</span><p class="muted">گفتگوی آزاد</p><button class="primary" onclick="showPage('chat')">ورود به چت</button></div></div>
+</section>
+<section class="page" id="profile">
+ <div class="card profile"><div class="avatar">A</div><div><h2>بازیکن مهمان</h2><p class="muted">عضو آزمایشی GameLand</p></div></div>
+ <div class="card" style="margin-top:16px"><h3>اطلاعات حساب</h3><p>نام نمایشی: بازیکن مهمان</p><p>وضعیت: <span style="color:#5ce0ae">فعال (دمو)</span></p><p class="muted">ثبت‌نام و ویرایش پروفایل در نسخه اصلی اضافه خواهد شد.</p></div>
+</section>
+<div class="footer">GameLand Demo · نمونه اولیه رابط کاربری · 2026</div>
+</main></div>
+<script>
+const titles={home:'داشبورد GameLand',games:'بازی‌های آنلاین',chat:'چت عمومی',rooms:'اتاق‌های گفتگو',profile:'پروفایل بازیکن'};
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));document.getElementById('pageTitle').textContent=titles[id];window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+const truths=['آخرین باری که از ته دل خندیدی کی بود؟','بزرگ‌ترین آرزوت چیه؟','تا حالا شده به کسی پیام بدی و سریع پشیمون بشی؟'];
+const dares=['به یکی از دوستات یک تعریف قشنگ بگو.','یک دقیقه با لحن مجری اخبار حرف بزن!','اسم سه تا خوراکی موردعلاقه‌ات رو سریع بگو.'];
+function startTruth(){document.getElementById('truthPanel').style.display='block';document.getElementById('guessPanel').style.display='none';document.getElementById('truthQuestion').textContent='منتظر انتخاب تو هستیم!';document.getElementById('truthResult').textContent=''}
+function truth(type){let arr=type==='حقیقت'?truths:dares;document.getElementById('truthQuestion').textContent=arr[Math.floor(Math.random()*arr.length)];document.getElementById('truthResult').textContent='نوبت توئه! 😄'}
+function startGuess(){document.getElementById('guessPanel').style.display='block';document.getElementById('truthPanel').style.display='none'}
+function checkGuess(){let v=document.getElementById('guess').value.trim();document.getElementById('guessResult').textContent=v.includes('موبایل')||v.includes('گوشی')?'آفرین! درست حدس زدی 🎉':'این کلمه نیست؛ دوباره تلاش کن!'}
+document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();let input=document.getElementById('chatInput'),v=input.value.trim();if(!v)return;let d=document.createElement('div');d.className='msg mine';let s=document.createElement('small');s.textContent='تو';d.append(s,document.createTextNode(v));document.getElementById('messages').appendChild(d);input.value='';document.getElementById('messages').scrollTop=99999});
+</script>
+</body></html>
